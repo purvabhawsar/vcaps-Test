@@ -1,0 +1,189 @@
+<html>
+<head><title>Form</title></head>
+<link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+
+
+
+<style type="text/css">
+body {
+    font-family: 'Alegreya Sans';
+    font-size: 22px;
+}
+#box{
+	height: 80px;
+	width: 80px;
+
+	border: 1px solid black;
+}
+h2{
+	text-align: center;
+	padding: 20px;
+
+}
+#one{
+	background-color: #003300;
+	color: white;
+}
+h3{
+	text-align: center;
+	
+	color: grey;
+	font-size: 25px;
+	padding: 15px 0px 0px 20px;
+	color: #003300;
+}
+h4{
+	padding: 15px 0px 0px 50px;
+	color: #003300;
+}
+input{
+	
+	
+}
+#btn{
+	padding: 10px;
+	background-color: #003300;
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+}
+#btn:hover{
+	color: #003300;
+	background-color: white;
+	border: 2px solid #003300;
+	font-weight: bolder;
+
+}
+h6{
+	padding:20px 0px 0px 200px;
+}
+#content{
+	width: 550px;
+	height:920px;
+	border:2px solid #003300;
+	margin: 0 auto;
+
+}
+
+#footer{
+	width: 550px;
+	height:100px;
+	border:2px solid #003300;
+	margin: 0 auto;
+
+}
+
+
+
+
+	
+
+
+
+
+
+</style>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<body>
+<div id="content">
+<table border="0px" align="center">
+<tr id="one">
+	<td colspan="2"><h2>Registration Form</h2></td>
+</tr>
+
+
+<tr>
+<td><h3>FullName</h3></td>
+<td><h4><input type="text" placeholder="enter Your Name"></h4></td>
+</tr>
+
+<tr>
+<td><h3>Email</h3></td>
+<td><h4><input type="email" placeholder="Enter Your Email"></h4></td>
+</tr>
+
+<tr>
+<td><h3>Password</h3></td>
+<td><h4><input type="password" placeholder="Enter Your Password"></h4></td>
+</tr>
+
+<tr>
+<td><h3>Contact</h3></td>
+<td><h4><input type="tel" placeholder="Enter Your Mobile No."></h4></td>
+</tr>
+
+<tr>
+<td><h3>Address</h3></td>
+<td><h4><textarea placeholder="Enter Your Address"></textarea></h4></td>
+</tr>
+
+<tr>
+<td><h3>Gender</h3></td>
+<td><h4>Male<input type="radio" name="gender">Female<input type="radio" name="gender"></h4></td>
+</tr>
+
+<tr>
+<td><h3>City</h3></td>
+<td><h4><dropdown><select>
+	<option>Select City</option>
+	<option>Indore</option>
+	<option>Barwani</option>
+	<option>Mumbai</option>
+	<option>Luckhnow</option>
+
+
+</select></dropdown></h4></td>
+</tr>
+
+<tr>
+<td><h3>Skills</h3></td>
+<td><h4>
+PHP<input type="checkbox">
+HTML<input type="checkbox">
+JAVASCRIPT<input type="checkbox">
+
+</h4>
+</td>
+</tr>
+
+<tr>
+<td><h3>Drag-->Down</h3></td>
+<td><h4><div id="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<img src="images/drag2.jpg" height="80px" width="80px"  draggable="true" ondragstart="drag(event)" id="drag1"></h4></td>
+</tr></table>
+</div>
+
+<div id="footer">
+<table>
+<tr>
+<td colspan="2"><center><h6><input type="submit" value="Submit Form" id="btn"></h6></center></td>
+</tr>
+</table>
+</div>
+
+
+
+	
+
+
+</table>
+</div>
+	
+</body>
+</html>
